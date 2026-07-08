@@ -1,0 +1,31 @@
+{
+	"toast_remover.config.title": "Toast remover config",
+	"toast_remover.config.category.general": "General",
+	"toast_remover.config.category.toast_types": "Toast types",
+	"toast_remover.config.category.system_toasts": "System toasts",
+	"toast_remover.config.enabled": "Enable the mod",
+	"toast_remover.config.disable_every_toasts": "Disable every toast",
+	"toast_remover.config.disable_non_vanilla": "Disable non-vanilla toasts",
+	"toast_remover.config.disable_advancement": "Disable advancement toasts",
+	"toast_remover.config.disable_tutorial": "Disable tutorial toasts",
+	"toast_remover.config.disable_recipe": "Disable recipe toasts",
+	"toast_remover.config.disable_friend": "Disable friend toasts",
+	"toast_remover.config.disable_now_playing": "Disable now playing toasts",
+	"toast_remover.config.disable_system": "Disable system toasts",
+
+	"toast_remover.config.disable_narrator_toggle": "Disable narrator toggle toast",
+	"toast_remover.config.disable_world_backup": "Disable world backup toast",
+	"toast_remover.config.disable_pack_load_failure": "Disable pack load failure toast",
+	"toast_remover.config.disable_world_access_failure": "Disable world access failure toast",
+	"toast_remover.config.disable_pack_copy_failure": "Disable pack copy failure toast",
+	"toast_remover.config.disable_file_drop_failure": "Disable file drop failure toast",
+	"toast_remover.config.disable_periodic_notification": "Disable periodic notification toast",
+	"toast_remover.config.disable_low_disk_space": "Disable low disk space toast",
+	"toast_remover.config.disable_chunk_load_failure": "Disable chunk load failure toast",
+	"toast_remover.config.disable_chunk_save_failure": "Disable chunk save failure toast",
+	"toast_remover.config.disable_unsecure_server_warning": "Disable insecure server warning toast",
+	"toast_remover.config.disable_friend_system_notification": "Disable friend system notification toast",
+
+	"toast_remover.toast.missing_cloth_config.title": "Missing cloth config",
+	"toast_remover.toast.missing_cloth_config.message": "Cloth config is required to open the config screen"
+}

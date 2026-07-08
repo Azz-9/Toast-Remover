@@ -1,0 +1,31 @@
+{
+	"toast_remover.config.title": "Toast remover configuration",
+	"toast_remover.config.category.general": "Général",
+	"toast_remover.config.category.toast_types": "Types de toast",
+	"toast_remover.config.category.system_toasts": "Toasts système",
+	"toast_remover.config.enabled": "Activer le mod",
+	"toast_remover.config.disable_every_toasts": "Désactiver tous les toasts",
+	"toast_remover.config.disable_non_vanilla": "Désactiver les toasts non vanilla",
+	"toast_remover.config.disable_advancement": "Désactiver les toasts de succès",
+	"toast_remover.config.disable_tutorial": "Désactiver les toasts de tutoriel",
+	"toast_remover.config.disable_recipe": "Désactiver les toasts de recettes",
+	"toast_remover.config.disable_friend": "Désactiver les toasts d'amis",
+	"toast_remover.config.disable_now_playing": "Désactiver les toasts « Lecture en cours »",
+	"toast_remover.config.disable_system": "Désactiver les toasts système",
+
+	"toast_remover.config.disable_narrator_toggle": "Désactiver le toast du narrateur",
+	"toast_remover.config.disable_world_backup": "Désactiver le toast de sauvegarde du monde",
+	"toast_remover.config.disable_pack_load_failure": "Désactiver le toast d'échec de chargement d'un pack",
+	"toast_remover.config.disable_world_access_failure": "Désactiver le toast d'échec d'accès au monde",
+	"toast_remover.config.disable_pack_copy_failure": "Désactiver le toast d'échec de copie d'un pack",
+	"toast_remover.config.disable_file_drop_failure": "Désactiver le toast d'échec du glisser-déposer de fichier",
+	"toast_remover.config.disable_periodic_notification": "Désactiver le toast de notification périodique",
+	"toast_remover.config.disable_low_disk_space": "Désactiver le toast d'espace disque insuffisant",
+	"toast_remover.config.disable_chunk_load_failure": "Désactiver le toast d'échec de chargement d'un chunk",
+	"toast_remover.config.disable_chunk_save_failure": "Désactiver le toast d'échec de sauvegarde d'un chunk",
+	"toast_remover.config.disable_unsecure_server_warning": "Désactiver le toast d'avertissement de serveur non sécurisé",
+	"toast_remover.config.disable_friend_system_notification": "Désactiver le toast de notification du système d'amis",
+
+	"toast_remover.toast.missing_cloth_config.title": "Cloth config manquant",
+	"toast_remover.toast.missing_cloth_config.message": "Cloth config est nécessaire pour ouvrir l'écran de configuration"
+}
