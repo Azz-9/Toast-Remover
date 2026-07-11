@@ -20,8 +20,8 @@ and highly configurable client-side mod.
 
 ## Installation
 
-1. Download the jar for your loader from [Modrinth](#)
-   or [CurseForge](#)
+1. Download the jar for your loader from [Modrinth](https://modrinth.com/project/toast-remover)
+   or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/toast-remover)
 2. Drop it into your `mods/` folder
 
 **Optional but recommended:**
@@ -36,35 +36,50 @@ file manually (see below).
 
 ## Configuration
 
-The config file is located at `.minecraft/config/durability_alert.json` and is created automatically on first launch.
+The config file is located at `.minecraft/config/toast_remover.json` and is created automatically on first launch.
 
-| Option                           | Type    | Default | Description                                                                              |
-|----------------------------------|---------|:-------:|------------------------------------------------------------------------------------------|
-| enabled                          | Boolean | `true`  | Enables or disables the mod.                                                             |
-| disableEveryToasts               | Boolean | `false` | Hides every toast regardless of its type.                                                |
-| disableNonVanilla                | Boolean | `false` | Hides toasts added by other mods.                                                        |
-| disableEveryToastWhooshSound     | Boolean | `false` | Disables the default toast show/hide sound.                                              |
-| disableHiddenToastWhooshSound    | Boolean | `true`  | Disables the whoosh sound only for toasts hidden by the mod.                             |
-| disableChallengeAdvancementSound | Boolean | `false` | Disables the special sound played for challenge advancements.                            |
-| disableNonVanillaToastSounds     | Boolean | `false` | Disables custom sounds played by non-vanilla toasts while keeping vanilla sounds intact. |
-| disableAdvancement               | Boolean | `false` | Hides advancement toasts.                                                                |
-| disableTutorial                  | Boolean | `false` | Hides tutorial toasts.                                                                   |
-| disableRecipe                    | Boolean | `false` | Hides recipe unlock toasts.                                                              |
-| disableFriend                    | Boolean | `false` | Hides friend notification toasts.                                                        |
-| disableNowPlaying                | Boolean | `false` | Hides music "Now Playing" toasts.                                                        |
-| disableSystem                    | Boolean | `false` | Hides every system toast.                                                                |
-| disableNarratorToggle            | Boolean | `false` | Hides the narrator toggle notification.                                                  |
-| disableWorldBackup               | Boolean | `false` | Hides the world backup notification.                                                     |
-| disablePackLoadFailure           | Boolean | `false` | Hides resource pack load failure notifications.                                          |
-| disableWorldAccessFailure        | Boolean | `false` | Hides world access failure notifications.                                                |
-| disablePackCopyFailure           | Boolean | `false` | Hides resource pack copy failure notifications.                                          |
-| disableFileDropFailure           | Boolean | `false` | Hides file drag-and-drop failure notifications.                                          |
-| disablePeriodicNotification      | Boolean | `false` | Hides periodic system notifications.                                                     |
-| disableLowDiskSpace              | Boolean | `false` | Hides low disk space warnings.                                                           |
-| disableChunkLoadFailure          | Boolean | `false` | Hides chunk loading failure notifications.                                               |
-| disableChunkSaveFailure          | Boolean | `false` | Hides chunk saving failure notifications.                                                |
-| disableUnsecureServerWarning     | Boolean | `false` | Hides insecure server warning notifications.                                             |
-| disableFriendSystemNotification  | Boolean | `false` | Hides friend system notifications.                                                       |
+### General
+
+| Option               | Type    | Default | Description                               |
+|----------------------|---------|:-------:|-------------------------------------------|
+| `enabled`            | Boolean | `true`  | Enables or disables the mod.              |
+| `disableEveryToasts` | Boolean | `false` | Hides every toast regardless of its type. |
+| `disableNonVanilla`  | Boolean | `false` | Hides toasts added by other mods.         |
+
+### Toast types
+
+| Option               | Type    | Default | Description                       |
+|----------------------|---------|:-------:|-----------------------------------|
+| `disableAdvancement` | Boolean | `false` | Hides advancement toasts.         |
+| `disableTutorial`    | Boolean | `false` | Hides tutorial toasts.            |
+| `disableRecipe`      | Boolean | `false` | Hides recipe unlock toasts.       |
+| `disableNowPlaying`  | Boolean | `false` | Hides music "Now Playing" toasts. |
+| `disableSystem`      | Boolean | `false` | Hides every system toast.         |
+
+### System Toasts
+
+| Option                            | Type    | Default | Description                                     |
+|-----------------------------------|---------|:-------:|-------------------------------------------------|
+| `disableNarratorToggle`           | Boolean | `false` | Hides the narrator toggle notification.         |
+| `disableWorldBackup`              | Boolean | `false` | Hides the world backup notification.            |
+| `disablePackLoadFailure`          | Boolean | `false` | Hides resource pack load failure notifications. |
+| `disableWorldAccessFailure`       | Boolean | `false` | Hides world access failure notifications.       |
+| `disablePackCopyFailure`          | Boolean | `false` | Hides resource pack copy failure notifications. |
+| `disableFileDropFailure`          | Boolean | `false` | Hides file drag-and-drop failure notifications. |
+| `disablePeriodicNotification`     | Boolean | `false` | Hides periodic system notifications.            |
+| `disableLowDiskSpace`             | Boolean | `false` | Hides low disk space warnings.                  |
+| `disableChunkLoadFailure`         | Boolean | `false` | Hides chunk loading failure notifications.      |
+| `disableChunkSaveFailure`         | Boolean | `false` | Hides chunk saving failure notifications.       |
+| `disableUnsecureServerWarning`    | Boolean | `false` | Hides insecure server warning notifications.    |
+
+### Sound
+
+| Option                             | Type    | Default | Description                                                                              |
+|------------------------------------|---------|:-------:|------------------------------------------------------------------------------------------|
+| `disableEveryToastWhooshSound`     | Boolean | `false` | Disables the default toast show/hide sound.                                              |
+| `disableHiddenToastWhooshSound`    | Boolean | `true`  | Disables the whoosh sound only for toasts hidden by the mod.                             |
+| `disableChallengeAdvancementSound` | Boolean | `false` | Disables the special sound played for challenge advancements.                            |
+| `disableNonVanillaToastSounds`     | Boolean | `false` | Disables custom sounds played by non-vanilla toasts while keeping vanilla sounds intact. |
 
 ---
 
