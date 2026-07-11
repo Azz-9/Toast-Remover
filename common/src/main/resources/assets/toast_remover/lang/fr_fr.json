@@ -27,7 +27,7 @@
 	"toast_remover.config.disable_unsecure_server_warning": "Désactiver le toast d'avertissement de serveur non sécurisé",
 	"toast_remover.config.disable_friend_system_notification": "Désactiver le toast de notification du système d'amis",
 
-	"toast_remover.config.disable_toast_whoosh_sound": "Désactiver le son d'apparition/disparition des toasts",
+	"toast_remover.config.disable_toast_whoosh_sound": "Désactiver le son d'apparition/disparition de tous les toasts",
 	"toast_remover.config.disable_hidden_toast_whoosh_sound": "Désactiver le son d’apparition/disparition des toasts masqués",
 	"toast_remover.config.disable_hidden_toast_whoosh_sound.tooltip": "Désactive uniquement le son des toasts masqués par Toast Remover.",
 	"toast_remover.config.disable_challenge_advancement_sound": "Désactiver le son des succès de défi",

@@ -28,7 +28,7 @@
 	"toast_remover.config.disable_unsecure_server_warning": "Disable insecure server warning toast",
 	"toast_remover.config.disable_friend_system_notification": "Disable friend system notification toast",
 
-	"toast_remover.config.disable_toast_whoosh_sound": "Disable toast whoosh sound",
+	"toast_remover.config.disable_toast_whoosh_sound": "Disable every toast whoosh sound",
 	"toast_remover.config.disable_hidden_toast_whoosh_sound": "Disable whoosh sound for hidden toasts",
 	"toast_remover.config.disable_hidden_toast_whoosh_sound.tooltip": "Only disables the whoosh sound for toasts hidden by Toast Remover.",
 	"toast_remover.config.disable_challenge_advancement_sound": "Disable challenge advancement sound",
