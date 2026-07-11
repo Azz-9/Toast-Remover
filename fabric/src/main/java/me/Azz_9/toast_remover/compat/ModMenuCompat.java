@@ -21,7 +21,7 @@ public class ModMenuCompat implements ModMenuApi {
 				// Toast remover displaying a toast O_o
 				Minecraft.getInstance().execute(() ->
 						SystemToast.add(
-								Minecraft.getInstance().gui.toastManager(),
+								Minecraft.getInstance().getToastManager(),
 								CustomToastId.MISSING_CLOTH_CONFIG,
 								Component.translatable("toast_remover.toast.missing_cloth_config.title"),
 								Component.translatable("toast_remover.toast.missing_cloth_config.message")

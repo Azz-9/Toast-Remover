@@ -86,16 +86,6 @@ public class ClothConfigCompat {
 				.setRequirement(() -> enabledEntry.getValue() && !disableEveryToastsEntry.getValue())
 				.build();
 
-		BooleanListEntry disableFriendEntry = entryBuilder
-				.startBooleanToggle(
-						Component.translatable("toast_remover.config.disable_friend"),
-						Config.INSTANCE.disableFriend
-				)
-				.setDefaultValue(false)
-				.setSaveConsumer(value -> Config.INSTANCE.disableFriend = value)
-				.setRequirement(() -> enabledEntry.getValue() && !disableEveryToastsEntry.getValue())
-				.build();
-
 		BooleanListEntry disableNowPlayingEntry = entryBuilder
 				.startBooleanToggle(
 						Component.translatable("toast_remover.config.disable_now_playing"),
@@ -119,7 +109,6 @@ public class ClothConfigCompat {
 		toastTypes.addEntry(disableAdvancementEntry);
 		toastTypes.addEntry(disableTutorialEntry);
 		toastTypes.addEntry(disableRecipeEntry);
-		toastTypes.addEntry(disableFriendEntry);
 		toastTypes.addEntry(disableNowPlayingEntry);
 		toastTypes.addEntry(disableSystemEntry);
 
@@ -235,15 +224,17 @@ public class ClothConfigCompat {
 				.setRequirement(() -> enabledEntry.getValue() && !disableEveryToastsEntry.getValue() && !disableSystemEntry.getValue())
 				.build();
 
-		BooleanListEntry disableFriendSystemNotificationEntry = entryBuilder
-				.startBooleanToggle(
-						Component.translatable("toast_remover.config.disable_friend_system_notification"),
-						Config.INSTANCE.disableFriendSystemNotification
-				)
-				.setDefaultValue(false)
-				.setSaveConsumer(value -> Config.INSTANCE.disableFriendSystemNotification = value)
-				.setRequirement(() -> enabledEntry.getValue() && !disableEveryToastsEntry.getValue() && !disableSystemEntry.getValue())
-				.build();
+		systemToasts.addEntry(disableNarratorToggleEntry);
+		systemToasts.addEntry(disableWorldBackupEntry);
+		systemToasts.addEntry(disablePackLoadFailureEntry);
+		systemToasts.addEntry(disableWorldAccessFailureEntry);
+		systemToasts.addEntry(disablePackCopyFailureEntry);
+		systemToasts.addEntry(disableFileDropFailureEntry);
+		systemToasts.addEntry(disablePeriodicNotificationEntry);
+		systemToasts.addEntry(disableLowDiskSpaceEntry);
+		systemToasts.addEntry(disableChunkLoadFailureEntry);
+		systemToasts.addEntry(disableChunkSaveFailureEntry);
+		systemToasts.addEntry(disableUnsecureServerWarningEntry);
 
 		ConfigCategory soundCategory = builder.getOrCreateCategory(Component.translatable("toast_remover.config.category.sound"));
 
@@ -292,19 +283,6 @@ public class ClothConfigCompat {
 		soundCategory.addEntry(disableHiddenToastWhooshSoundEntry);
 		soundCategory.addEntry(disableChallengeAdvancementSoundEntry);
 		soundCategory.addEntry(disableNonVanillaToastSoundsEntry);
-
-		systemToasts.addEntry(disableNarratorToggleEntry);
-		systemToasts.addEntry(disableWorldBackupEntry);
-		systemToasts.addEntry(disablePackLoadFailureEntry);
-		systemToasts.addEntry(disableWorldAccessFailureEntry);
-		systemToasts.addEntry(disablePackCopyFailureEntry);
-		systemToasts.addEntry(disableFileDropFailureEntry);
-		systemToasts.addEntry(disablePeriodicNotificationEntry);
-		systemToasts.addEntry(disableLowDiskSpaceEntry);
-		systemToasts.addEntry(disableChunkLoadFailureEntry);
-		systemToasts.addEntry(disableChunkSaveFailureEntry);
-		systemToasts.addEntry(disableUnsecureServerWarningEntry);
-		systemToasts.addEntry(disableFriendSystemNotificationEntry);
 
 		return builder.build();
 	}

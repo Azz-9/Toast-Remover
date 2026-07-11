@@ -28,7 +28,6 @@ public class Config {
 	public boolean disableAdvancement = false;
 	public boolean disableTutorial = false;
 	public boolean disableRecipe = false;
-	public boolean disableFriend = false;
 	public boolean disableNowPlaying = false;
 	public boolean disableSystem = false;
 	// MC_COPY ids from net.minecraft.client.gui.components.toasts.SystemToast.SystemToastId
@@ -43,7 +42,6 @@ public class Config {
 	public boolean disableChunkLoadFailure = false;
 	public boolean disableChunkSaveFailure = false;
 	public boolean disableUnsecureServerWarning = false;
-	public boolean disableFriendSystemNotification = false;
 
 	public static Config INSTANCE = new Config();
 

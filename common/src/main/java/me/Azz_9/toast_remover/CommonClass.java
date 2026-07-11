@@ -45,7 +45,6 @@ public class CommonClass {
 		SYSTEM_TOAST.put(CHUNK_LOAD_FAILURE, () -> Config.INSTANCE.disableChunkLoadFailure);
 		SYSTEM_TOAST.put(CHUNK_SAVE_FAILURE, () -> Config.INSTANCE.disableChunkSaveFailure);
 		SYSTEM_TOAST.put(UNSECURE_SERVER_WARNING, () -> Config.INSTANCE.disableUnsecureServerWarning);
-		SYSTEM_TOAST.put(FRIEND_SYSTEM_NOTIFICATION, () -> Config.INSTANCE.disableFriendSystemNotification);
 	}
 
 	private static boolean shouldSystemToastBeHidden(SystemToast.SystemToastId id) {
@@ -64,7 +63,6 @@ public class CommonClass {
 			case AdvancementToast ignored -> Config.INSTANCE.disableAdvancement;
 			case TutorialToast ignored -> Config.INSTANCE.disableTutorial;
 			case RecipeToast ignored -> Config.INSTANCE.disableRecipe;
-			case FriendToast ignored -> Config.INSTANCE.disableFriend;
 			case NowPlayingToast ignored -> Config.INSTANCE.disableNowPlaying;
 			default -> false;
 		};
@@ -101,7 +99,6 @@ public class CommonClass {
 				|| toastClass == AdvancementToast.class
 				|| toastClass == TutorialToast.class
 				|| toastClass == RecipeToast.class
-				|| toastClass == FriendToast.class
 				|| toastClass == NowPlayingToast.class;
 	}
 }

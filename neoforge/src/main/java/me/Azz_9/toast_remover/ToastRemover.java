@@ -33,7 +33,7 @@ public class ToastRemover {
 					if (!ModList.get().isLoaded(CLOTH_CONFIG_ID_NEOFORGE)) {
 						Minecraft.getInstance().execute(() ->
 								SystemToast.add(
-										Minecraft.getInstance().gui.toastManager(),
+										Minecraft.getInstance().getToastManager(),
 										CustomToastId.MISSING_CLOTH_CONFIG,
 										Component.translatable("toast_remover.toast.missing_cloth_config.title"),
 										Component.translatable("toast_remover.toast.missing_cloth_config.message")
