@@ -31,6 +31,8 @@
         "${mod_id}.fabric.mixins.json"
     ],
 
+	"accessWidener": "toast_remover.accesswidener",
+
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
         "minecraft": "${minecraft_compatibility}",

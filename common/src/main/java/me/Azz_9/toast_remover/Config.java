@@ -21,6 +21,10 @@ public class Config {
 	public boolean enabled = true;
 	public boolean disableEveryToasts = false;
 	public boolean disableNonVanilla = false;
+	public boolean disableEveryToastWhooshSound = false;
+	public boolean disableHiddenToastWhooshSound = true;
+	public boolean disableChallengeAdvancementSound = false;
+	public boolean disableNonVanillaToastSounds = false;
 	public boolean disableAdvancement = false;
 	public boolean disableTutorial = false;
 	public boolean disableRecipe = false;

@@ -47,23 +47,60 @@ public class CommonClass {
 		SYSTEM_TOAST.put(FRIEND_SYSTEM_NOTIFICATION, () -> Config.INSTANCE.disableFriendSystemNotification);
 	}
 
-	private static boolean shouldSystemToastBeCanceled(SystemToast.SystemToastId id) {
+	private static boolean shouldSystemToastBeHidden(SystemToast.SystemToastId id) {
 		return SYSTEM_TOAST.getOrDefault(id, () -> Config.INSTANCE.disableNonVanilla).getAsBoolean();
 	}
 
-	public static boolean shouldBeCanceled(Toast toast) {
+	public static boolean shouldToastBeHidden(Toast toast) {
 		if (!Config.INSTANCE.enabled) return false;
 
 		if (Config.INSTANCE.disableEveryToasts) return true;
 
+		if (!isVanillaToast(toast) && Config.INSTANCE.disableNonVanilla) return true;
+
 		return switch (toast) {
-			case SystemToast systemToast -> Config.INSTANCE.disableSystem || shouldSystemToastBeCanceled(((SystemToastAccessor) systemToast).getId());
-			case AdvancementToast advancementToast -> Config.INSTANCE.disableAdvancement;
-			case TutorialToast tutorialToast -> Config.INSTANCE.disableTutorial;
-			case RecipeToast recipeToast -> Config.INSTANCE.disableRecipe;
-			case FriendToast friendToast -> Config.INSTANCE.disableFriend;
-			case NowPlayingToast nowPlayingToast -> Config.INSTANCE.disableNowPlaying;
-			default -> Config.INSTANCE.disableNonVanilla;
+			case SystemToast systemToast -> Config.INSTANCE.disableSystem || shouldSystemToastBeHidden(((SystemToastAccessor) systemToast).getId());
+			case AdvancementToast ignored -> Config.INSTANCE.disableAdvancement;
+			case TutorialToast ignored -> Config.INSTANCE.disableTutorial;
+			case RecipeToast ignored -> Config.INSTANCE.disableRecipe;
+			case FriendToast ignored -> Config.INSTANCE.disableFriend;
+			case NowPlayingToast ignored -> Config.INSTANCE.disableNowPlaying;
+			default -> false;
 		};
+	}
+
+	public static boolean shouldPlayWhooshSound(Toast toast) {
+		if (!Config.INSTANCE.enabled) {
+			return true;
+		}
+
+		if (Config.INSTANCE.disableEveryToastWhooshSound) {
+			return false;
+		}
+
+		return !Config.INSTANCE.disableHiddenToastWhooshSound || !shouldToastBeHidden(toast);
+	}
+
+	public static boolean shouldPlayCustomSound(Toast toast) {
+		if (!Config.INSTANCE.enabled) {
+			return true;
+		}
+
+		if (Config.INSTANCE.disableChallengeAdvancementSound && toast instanceof AdvancementToast) {
+			return false;
+		}
+
+		return !Config.INSTANCE.disableNonVanillaToastSounds || isVanillaToast(toast);
+	}
+
+	private static boolean isVanillaToast(Toast toast) {
+		Class<?> toastClass = toast.getClass();
+
+		return toastClass == SystemToast.class
+				|| toastClass == AdvancementToast.class
+				|| toastClass == TutorialToast.class
+				|| toastClass == RecipeToast.class
+				|| toastClass == FriendToast.class
+				|| toastClass == NowPlayingToast.class;
 	}
 }

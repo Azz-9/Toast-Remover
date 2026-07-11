@@ -3,6 +3,7 @@
 	"toast_remover.config.category.general": "Général",
 	"toast_remover.config.category.toast_types": "Types de toast",
 	"toast_remover.config.category.system_toasts": "Toasts système",
+	"toast_remover.config.category.sound": "Sons",
 	"toast_remover.config.enabled": "Activer le mod",
 	"toast_remover.config.disable_every_toasts": "Désactiver tous les toasts",
 	"toast_remover.config.disable_non_vanilla": "Désactiver les toasts non vanilla",
@@ -25,6 +26,12 @@
 	"toast_remover.config.disable_chunk_save_failure": "Désactiver le toast d'échec de sauvegarde d'un chunk",
 	"toast_remover.config.disable_unsecure_server_warning": "Désactiver le toast d'avertissement de serveur non sécurisé",
 	"toast_remover.config.disable_friend_system_notification": "Désactiver le toast de notification du système d'amis",
+
+	"toast_remover.config.disable_toast_whoosh_sound": "Désactiver le son d'apparition/disparition des toasts",
+	"toast_remover.config.disable_hidden_toast_whoosh_sound": "Désactiver le son d’apparition/disparition des toasts masqués",
+	"toast_remover.config.disable_hidden_toast_whoosh_sound.tooltip": "Désactive uniquement le son des toasts masqués par Toast Remover.",
+	"toast_remover.config.disable_challenge_advancement_sound": "Désactiver le son des succès de défi",
+	"toast_remover.config.disable_non_vanilla_toast_sounds": "Désactiver les sons des toasts non vanilla",
 
 	"toast_remover.toast.missing_cloth_config.title": "Cloth config manquant",
 	"toast_remover.toast.missing_cloth_config.message": "Cloth config est nécessaire pour ouvrir l'écran de configuration"

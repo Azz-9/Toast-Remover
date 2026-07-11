@@ -1,16 +1,17 @@
 {
-  "required": true,
-  "minVersion": "0.8",
-  "package": "me.Azz_9.toast_remover.mixin",
-  "compatibilityLevel": "JAVA_25",
-  "mixins": [],
-  "client": [
-  ],
-  "server": [],
-  "injectors": {
-    "defaultRequire": 1
-  },
-  "overwrites": {
-    "requireAnnotations": true
-  }
+	"required": true,
+	"minVersion": "0.8",
+	"package": "me.Azz_9.toast_remover.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": [],
+	"client": [
+		"ToastManagerMixinNeoForge"
+	],
+	"server": [],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
 }

@@ -245,6 +245,54 @@ public class ClothConfigCompat {
 				.setRequirement(() -> enabledEntry.getValue() && !disableEveryToastsEntry.getValue() && !disableSystemEntry.getValue())
 				.build();
 
+		ConfigCategory soundCategory = builder.getOrCreateCategory(Component.translatable("toast_remover.config.category.sound"));
+
+		BooleanListEntry disableEveryToastWhooshSoundEntry = entryBuilder
+				.startBooleanToggle(
+						Component.translatable("toast_remover.config.disable_toast_whoosh_sound"),
+						Config.INSTANCE.disableEveryToastWhooshSound
+				)
+				.setDefaultValue(false)
+				.setSaveConsumer(value -> Config.INSTANCE.disableEveryToastWhooshSound = value)
+				.setRequirement(enabledEntry::getValue)
+				.build();
+
+		BooleanListEntry disableHiddenToastWhooshSoundEntry = entryBuilder
+				.startBooleanToggle(
+						Component.translatable("toast_remover.config.disable_hidden_toast_whoosh_sound"),
+						Config.INSTANCE.disableHiddenToastWhooshSound
+				)
+				.setDefaultValue(true)
+				.setSaveConsumer(value -> Config.INSTANCE.disableHiddenToastWhooshSound = value)
+				.setRequirement(enabledEntry::getValue)
+				.setTooltip(Component.translatable("toast_remover.config.disable_hidden_toast_whoosh_sound.tooltip"))
+				.build();
+
+		BooleanListEntry disableChallengeAdvancementSoundEntry = entryBuilder
+				.startBooleanToggle(
+						Component.translatable("toast_remover.config.disable_challenge_advancement_sound"),
+						Config.INSTANCE.disableChallengeAdvancementSound
+				)
+				.setDefaultValue(false)
+				.setSaveConsumer(value -> Config.INSTANCE.disableChallengeAdvancementSound = value)
+				.setRequirement(enabledEntry::getValue)
+				.build();
+
+		BooleanListEntry disableNonVanillaToastSoundsEntry = entryBuilder
+				.startBooleanToggle(
+						Component.translatable("toast_remover.config.disable_non_vanilla_toast_sounds"),
+						Config.INSTANCE.disableNonVanillaToastSounds
+				)
+				.setDefaultValue(false)
+				.setSaveConsumer(value -> Config.INSTANCE.disableNonVanillaToastSounds = value)
+				.setRequirement(enabledEntry::getValue)
+				.build();
+
+		soundCategory.addEntry(disableEveryToastWhooshSoundEntry);
+		soundCategory.addEntry(disableHiddenToastWhooshSoundEntry);
+		soundCategory.addEntry(disableChallengeAdvancementSoundEntry);
+		soundCategory.addEntry(disableNonVanillaToastSoundsEntry);
+
 		systemToasts.addEntry(disableNarratorToggleEntry);
 		systemToasts.addEntry(disableWorldBackupEntry);
 		systemToasts.addEntry(disablePackLoadFailureEntry);
