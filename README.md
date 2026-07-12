@@ -3,7 +3,7 @@
 ![Fabric](https://img.shields.io/badge/Loader-Fabric-blue)
 ![NeoForge](https://img.shields.io/badge/Loader-NeoForge-orange)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
-![Side: Client](https://img.shields.io/badge/Side-Client-red)
+![Environment: Client](https://img.shields.io/badge/Environment-Client-red)
 
 Hide any toast, selectively disable toast sounds, and take full control over Minecraft's notifications with an extensive
 and highly configurable client-side mod.
