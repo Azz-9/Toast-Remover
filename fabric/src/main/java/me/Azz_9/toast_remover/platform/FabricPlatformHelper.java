@@ -3,17 +3,19 @@ package me.Azz_9.toast_remover.platform;
 import me.Azz_9.toast_remover.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.nio.file.Path;
 
 public class FabricPlatformHelper implements IPlatformHelper {
 
     @Override
-    public String getPlatformName() {
+    public @NotNull String getPlatformName() {
         return "Fabric";
     }
 
     @Override
-    public boolean isModLoaded(String modId) {
+    public boolean isModLoaded(@NotNull String modId) {
         return FabricLoader.getInstance().isModLoaded(modId);
     }
 
@@ -23,7 +25,7 @@ public class FabricPlatformHelper implements IPlatformHelper {
     }
 
 	@Override
-	public Path getConfigDir() {
+	public @NotNull Path getConfigDir() {
 		return FabricLoader.getInstance().getConfigDir();
 	}
 }

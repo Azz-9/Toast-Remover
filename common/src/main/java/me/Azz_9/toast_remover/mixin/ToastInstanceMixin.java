@@ -2,6 +2,7 @@ package me.Azz_9.toast_remover.mixin;
 
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.components.toasts.Toast;
+import net.minecraft.client.gui.components.toasts.ToastManager;
 
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import me.Azz_9.toast_remover.CommonClass;
 
-@Mixin(targets = "net.minecraft.client.gui.components.toasts.ToastManager$ToastInstance")
+@Mixin(ToastManager.ToastInstance.class)
 public abstract class ToastInstanceMixin {
 
 	@Shadow

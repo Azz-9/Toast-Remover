@@ -1,10 +1,9 @@
 package me.Azz_9.toast_remover.platform;
 
-import me.Azz_9.toast_remover.Constants;
+import java.util.ServiceLoader;
+
 import me.Azz_9.toast_remover.ToastLogger;
 import me.Azz_9.toast_remover.platform.services.IPlatformHelper;
-
-import java.util.ServiceLoader;
 
 // Service loaders are a built-in Java feature that allow us to locate implementations of an interface that vary from one
 // environment to another. In the context of MultiLoader we use this feature to access a mock API in the common code that
