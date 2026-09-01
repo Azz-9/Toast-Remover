@@ -5,17 +5,19 @@ import net.neoforged.fml.ModList;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.FMLPaths;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.nio.file.Path;
 
 public class NeoForgePlatformHelper implements IPlatformHelper {
 
     @Override
-    public String getPlatformName() {
+    public @NotNull String getPlatformName() {
         return "NeoForge";
     }
 
     @Override
-    public boolean isModLoaded(String modId) {
+    public boolean isModLoaded(@NotNull String modId) {
         return ModList.get().isLoaded(modId);
     }
 
@@ -25,7 +27,7 @@ public class NeoForgePlatformHelper implements IPlatformHelper {
     }
 
 	@Override
-	public Path getConfigDir() {
+	public @NotNull Path getConfigDir() {
 		return FMLPaths.CONFIGDIR.get();
 	}
 }

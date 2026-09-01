@@ -17,7 +17,7 @@ public class ModMenuCompat implements ModMenuApi {
 	@Override
 	public ConfigScreenFactory<?> getModConfigScreenFactory() {
 		if (!FabricLoader.getInstance().isModLoaded(CLOTH_CONFIG_ID_FABRIC)) {
-			return parent -> {
+			return _ -> {
 				// Toast remover displaying a toast O_o
 				Minecraft.getInstance().execute(() ->
 						SystemToast.add(
